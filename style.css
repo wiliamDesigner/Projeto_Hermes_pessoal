@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    overflow: hidden; /* Remove a barra de rolagem, se necessário */
+}
+
+header {
+    background-color: rgb(24, 24, 24);
+    padding: 10px 200px; 
+    display: flex;
+    justify-content: space-between;  
+    color: aliceblue;
+}
+
+header h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+}
+
+header a{
+    font-size: 13px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    list-style: none;
+    color: aliceblue;
+}
+
+
+nav a {
+    text-decoration: none;
+    cursor: pointer;
+    color: white; /* Define a cor do texto dos links como branco */
+}
+
+.Container img {
+    align-items: center;
+    width: 100%; /* Largura total da tela */
+    height: 100%; /* Altura total da tela */
+}
+
+.content {
+    position: absolute; /* Para sobrepor a imagem */
+    top: 20%;
+    left: 40%;
+    text-align: center;
+    color: white; /* Cor do texto */
+    padding: 20px;
+    font-size: 20px;
+}
+
+
+.content h2{
+    font-size: 50px;
+}
+
+
+.text p{
+    display: flex;
+    position: absolute; /* Para sobrepor a imagem */
+    top: 30%;
+    left: 40%;
+    text-align: center;
+    color: white; /* Cor do texto */
+    margin-top: 120px;
+    font-size: 15px; 
+    width: 40%;
+    margin-left: 100px;  
+}
+
+.img-telefone {
+    position: absolute; /* Isso coloca a imagem sobreposta */
+    bottom: 34%; /* Ajuste a posição conforme necessário */
+    left: 60%; /* Ajuste a posição horizontal conforme necessário */
+    text-align: center; /* Centraliza o conteúdo dentro do div */
+}
+
+.img-telefone img {
+    width: 30px; /* Defina o tamanho da imagem conforme desejado */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.telefone{
+    position: absolute;
+    bottom: 35%; /* Ajuste a posição conforme necessário */
+    left: 63%; /* Ajuste a posição horizontal conforme necessário */
+    color: aliceblue;
+    cursor: pointer;
+}
+
+@media (min-width: 641px) and (max-width: 1023px){
+    header {
+        background-color: rgb(24, 24, 24);
+        padding: 22px 400px; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        color: aliceblue;
+        gap: 22px;
+    }
+
+    .content {
+        top: 10%;
+        font-size: 20px;
+    }
+
+    .content h2{
+        font-size: 30px;
+    }
+
+    .text p{
+        top: 10%;
+        left: 33%;
+    }
+
+    .img-telefone {
+        bottom: 65%; /* Ajuste a posição conforme necessário */
+        left: 53%; /* Ajuste a posição horizontal conforme necessário */
+    }
+
+    .telefone{
+        bottom: 66%; /* Ajuste a posição conforme necessário */
+        left: 58%; /* Ajuste a posição horizontal conforme necessário */
+    }
+
+}
