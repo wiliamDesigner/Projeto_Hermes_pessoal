@@ -10,7 +10,7 @@ html, body {
 
 header {
     background-color: rgb(24, 24, 24);
-    padding: 10px 200px; 
+    padding: 10px 20px; 
     display: flex;
     justify-content: space-between;  
     color: aliceblue;
@@ -26,8 +26,6 @@ header a{
     font-family: "Montserrat", sans-serif;
 }
 
-
-
 nav {
     display: flex;
     align-items: center;
@@ -35,7 +33,6 @@ nav {
     list-style: none;
     color: aliceblue;
 }
-
 
 nav a {
     text-decoration: none;
@@ -46,91 +43,124 @@ nav a {
 .Container img {
     align-items: center;
     width: 100%; /* Largura total da tela */
-    height: 100%; /* Altura total da tela */
+    height: auto; /* Mantém a proporção da imagem */
 }
 
 .content {
     position: absolute; /* Para sobrepor a imagem */
     top: 20%;
-    left: 40%;
+    left: 10%;
+    right: 10%;
     text-align: center;
     color: white; /* Cor do texto */
     padding: 20px;
     font-size: 20px;
 }
 
-
 .content h2{
     font-size: 50px;
 }
 
-
-.text p{
-    display: flex;
-    position: absolute; /* Para sobrepor a imagem */
-    top: 30%;
-    left: 40%;
+.text p {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    right: 10%;
     text-align: center;
     color: white; /* Cor do texto */
-    margin-top: 120px;
     font-size: 15px; 
-    width: 40%;
-    margin-left: 100px;  
 }
 
 .img-telefone {
     position: absolute; /* Isso coloca a imagem sobreposta */
-    bottom: 34%; /* Ajuste a posição conforme necessário */
-    left: 60%; /* Ajuste a posição horizontal conforme necessário */
+    bottom: 10%; /* Ajuste a posição conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center; /* Centraliza o conteúdo dentro do div */
 }
 
 .img-telefone img {
-    width: 30px; /* Defina o tamanho da imagem conforme desejado */
+    width: 50px; /* Defina o tamanho da imagem conforme desejado */
     height: auto; /* Mantém a proporção da imagem */
 }
 
-.telefone{
+.telefone {
     position: absolute;
-    bottom: 35%; /* Ajuste a posição conforme necessário */
-    left: 63%; /* Ajuste a posição horizontal conforme necessário */
+    bottom: 5%; /* Ajuste a posição conforme necessário */
+    left: 50%;
+    transform: translateX(-50%);
     color: aliceblue;
     cursor: pointer;
+    text-align: center;
 }
 
-@media (min-width: 641px) and (max-width: 1023px){
+/* Para telas de tablets (entre 641px e 1023px) */
+@media (min-width: 641px) and (max-width: 1023px) {
     header {
-        background-color: rgb(24, 24, 24);
-        padding: 22px 400px; 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;  
-        color: aliceblue;
-        gap: 22px;
+        padding: 10px 40px; 
     }
 
     .content {
         top: 10%;
-        font-size: 20px;
+        left: 10%;
+        right: 10%;
+        font-size: 18px;
     }
 
-    .content h2{
-        font-size: 30px;
+    .content h2 {
+        font-size: 36px;
     }
 
-    .text p{
-        top: 10%;
-        left: 33%;
+    .text p {
+        top: 35%;
+        left: 10%;
+        right: 10%;
+        font-size: 16px;
     }
 
     .img-telefone {
-        bottom: 65%; /* Ajuste a posição conforme necessário */
-        left: 53%; /* Ajuste a posição horizontal conforme necessário */
+        bottom: 15%;
+        left: 50%;
     }
 
-    .telefone{
-        bottom: 66%; /* Ajuste a posição conforme necessário */
-        left: 58%; /* Ajuste a posição horizontal conforme necessário */
+    .telefone {
+        bottom: 10%;
+        left: 50%;
+    }
+}
+
+/* Para telas de celulares (até 640px) */
+@media (max-width: 640px) {
+    header {
+        padding: 10px 20px; 
     }
 
+    .content {
+        top: 15%;
+        left: 10%;
+        right: 10%;
+        font-size: 16px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .text p {
+        top: 30%;
+        left: 10%;
+        right: 10%;
+        font-size: 14px;
+    }
+
+    .img-telefone {
+        bottom: 10%;
+        left: 50%;
+    }
+
+    .telefone {
+        bottom: 5%;
+        left: 50%;
+        font-size: 14px;
+    }
 }
