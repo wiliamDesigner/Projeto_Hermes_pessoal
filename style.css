@@ -5,12 +5,11 @@
 }
 html, body {
     height: 100%;
-    overflow: hidden; /* Remove a barra de rolagem, se necessário */
 }
 
 header {
     background-color: rgb(24, 24, 24);
-    padding: 10px 20px; 
+    padding: 10px 200px; 
     display: flex;
     justify-content: space-between;  
     color: aliceblue;
@@ -26,6 +25,8 @@ header a{
     font-family: "Montserrat", sans-serif;
 }
 
+
+
 nav {
     display: flex;
     align-items: center;
@@ -33,6 +34,7 @@ nav {
     list-style: none;
     color: aliceblue;
 }
+
 
 nav a {
     text-decoration: none;
@@ -43,124 +45,107 @@ nav a {
 .Container img {
     align-items: center;
     width: 100%; /* Largura total da tela */
-    height: auto; /* Mantém a proporção da imagem */
+    height: 100%; /* Altura total da tela */
+    max-width: 100%; /* Garante que a imagem não exceda a largura da tela */
 }
 
 .content {
-    position: absolute; /* Para sobrepor a imagem */
     top: 20%;
-    left: 10%;
-    right: 10%;
+    left: 40%;
     text-align: center;
     color: white; /* Cor do texto */
     padding: 20px;
     font-size: 20px;
 }
 
+
 .content h2{
     font-size: 50px;
 }
 
-.text p {
-    position: absolute;
-    top: 45%;
-    left: 10%;
-    right: 10%;
+
+.text p{
+    display: flex;
+    position: absolute; /* Para sobrepor a imagem */
+    top: 30%;
+    left: 40%;
     text-align: center;
     color: white; /* Cor do texto */
+    margin-top: 120px;
     font-size: 15px; 
+    width: 40%;
+    margin-left: 100px;  
 }
 
 .img-telefone {
     position: absolute; /* Isso coloca a imagem sobreposta */
-    bottom: 10%; /* Ajuste a posição conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 34%; /* Ajuste a posição conforme necessário */
+    left: 60%; /* Ajuste a posição horizontal conforme necessário */
     text-align: center; /* Centraliza o conteúdo dentro do div */
 }
 
 .img-telefone img {
-    width: 50px; /* Defina o tamanho da imagem conforme desejado */
+    width: 30px; /* Defina o tamanho da imagem conforme desejado */
     height: auto; /* Mantém a proporção da imagem */
 }
 
-.telefone {
+.telefone{
     position: absolute;
-    bottom: 5%; /* Ajuste a posição conforme necessário */
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 35%; /* Ajuste a posição conforme necessário */
+    left: 63%; /* Ajuste a posição horizontal conforme necessário */
     color: aliceblue;
     cursor: pointer;
-    text-align: center;
 }
 
-/* Para telas de tablets (entre 641px e 1023px) */
-@media (min-width: 641px) and (max-width: 1023px) {
+
+
+
+footer {
+    background-color: rgb(24, 24, 24);
+    color: aliceblue;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+
+
+
+@media (min-width: 641px) and (max-width: 1023px){
     header {
-        padding: 10px 40px; 
+        background-color: rgb(24, 24, 24);
+        padding: 22px 400px; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;  
+        color: aliceblue;
+        gap: 22px;
     }
 
     .content {
         top: 10%;
-        left: 10%;
-        right: 10%;
-        font-size: 18px;
+        font-size: 20px;
     }
 
-    .content h2 {
-        font-size: 36px;
+    .content h2{
+        font-size: 30px;
     }
 
-    .text p {
-        top: 35%;
-        left: 10%;
-        right: 10%;
-        font-size: 16px;
+    .text p{
+        top: 10%;
+        left: 33%;
     }
 
     .img-telefone {
-        bottom: 15%;
-        left: 50%;
+        bottom: 65%; /* Ajuste a posição conforme necessário */
+        left: 53%; /* Ajuste a posição horizontal conforme necessário */
     }
 
-    .telefone {
-        bottom: 10%;
-        left: 50%;
+    .telefone{
+        bottom: 66%; /* Ajuste a posição conforme necessário */
+        left: 58%; /* Ajuste a posição horizontal conforme necessário */
     }
+
 }
 
-/* Para telas de celulares (até 640px) */
-@media (max-width: 640px) {
-    header {
-        padding: 10px 20px; 
-    }
 
-    .content {
-        top: 15%;
-        left: 10%;
-        right: 10%;
-        font-size: 16px;
-    }
-
-    .content h2 {
-        font-size: 24px;
-    }
-
-    .text p {
-        top: 30%;
-        left: 10%;
-        right: 10%;
-        font-size: 14px;
-    }
-
-    .img-telefone {
-        bottom: 10%;
-        left: 50%;
-    }
-
-    .telefone {
-        bottom: 5%;
-        left: 50%;
-        font-size: 14px;
-    }
-}
